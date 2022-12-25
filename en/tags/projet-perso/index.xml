@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>projet perso - Tag - Clément Gindrier - Blog</title>
+        <link>https://clementgindrier.github.io/en/tags/projet-perso/</link>
+        <description>projet perso - Tag - Clément Gindrier - Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>clementgindrier@proton.me (Clément Gindrier)</managingEditor>
+            <webMaster>clementgindrier@proton.me (Clément Gindrier)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 11 Dec 2022 19:12:03 &#43;0100</lastBuildDate><atom:link href="https://clementgindrier.github.io/en/tags/projet-perso/" rel="self" type="application/rss+xml" /><item>
+    <title>Poke Race</title>
+    <link>https://clementgindrier.github.io/en/posts/course-de-poke/</link>
+    <pubDate>Sun, 11 Dec 2022 19:12:03 &#43;0100</pubDate>
+    <author>Clément Gindrier</author>
+    <guid>https://clementgindrier.github.io/en/posts/course-de-poke/</guid>
+    <description><![CDATA[Make a bar chart race with Facebook pokes]]></description>
+</item>
+</channel>
+</rss>

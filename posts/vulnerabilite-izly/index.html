@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Vulnérabilité Izly - Clément Gindrier - Blog</title><meta name="Description" content="J&#39;ai rapporté une vulnérabilité critique de l&#39;application Izly qui permet de faire payer son repas par n&#39;importe qui juste avec son numéro"><meta property="og:title" content="Vulnérabilité Izly" />
+<meta property="og:description" content="J&#39;ai rapporté une vulnérabilité critique de l&#39;application Izly qui permet de faire payer son repas par n&#39;importe qui juste avec son numéro" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://clementgindrier.github.io/posts/vulnerabilite-izly/" /><meta property="og:image" content="https://clementgindrier.github.io/posts/vulnerabilite-izly/featured-image.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-30T23:14:56+01:00" />
+<meta property="article:modified_time" content="2022-11-30T23:14:56+01:00" /><meta property="og:site_name" content="Blog" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://clementgindrier.github.io/posts/vulnerabilite-izly/featured-image.png"/>
+<meta name="twitter:title" content="Vulnérabilité Izly"/>
+<meta name="twitter:description" content="J&#39;ai rapporté une vulnérabilité critique de l&#39;application Izly qui permet de faire payer son repas par n&#39;importe qui juste avec son numéro"/>
+<meta name="application-name" content="Blog">
+<meta name="apple-mobile-web-app-title" content="Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://clementgindrier.github.io/posts/vulnerabilite-izly/" /><link rel="next" href="https://clementgindrier.github.io/posts/ticket-cantine/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Vulnérabilité Izly",
+        "inLanguage": "fr",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/clementgindrier.github.io\/posts\/vulnerabilite-izly\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/clementgindrier.github.io\/posts\/vulnerabilite-izly\/featured-image.png",
+                            "width":  877 ,
+                            "height":  438 
+                        }],"genre": "posts","keywords": "vulnérabilité","wordcount":  788 ,
+        "url": "https:\/\/clementgindrier.github.io\/posts\/vulnerabilite-izly\/","datePublished": "2022-11-30T23:14:56+01:00","dateModified": "2022-11-30T23:14:56+01:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Helazior","logo": "https:\/\/clementgindrier.github.io\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Clément Gindrier"
+            },"description": "J'ai rapporté une vulnérabilité critique de l'application Izly qui permet de faire payer son repas par n'importe qui juste avec son numéro"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Clément Gindrier - Blog"><span class="header-title-pre"><i class='fa fa-home' aria-hidden='true'></i></span>Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/categories/"> Catégories </a><a class="menu-item" href="/tags/"> Balises </a><a class="menu-item" href="/about/"> À propos </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Rechercher des titres, des contenus..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Chercher">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clair">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Changer de Thème">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="Choisir la langue">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/vulnerabilite-izly/" selected>Français</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Clément Gindrier - Blog"><span class="header-title-pre"><i class='fa fa-home' aria-hidden='true'></i></span>Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Rechercher des titres, des contenus..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Chercher">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clair">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Annuler
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Catégories</a><a class="menu-item" href="/tags/" title="">Balises</a><a class="menu-item" href="/about/" title="">À propos</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Changer de Thème">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Choisir la langue">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/vulnerabilite-izly/" selected>Français</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contenu</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Vulnérabilité Izly</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Clément Gindrier</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="30-11-2022">30-11-2022</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;788 mots&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/vulnerabilite-izly/featured-image.png"
+        data-srcset="/posts/vulnerabilite-izly/featured-image.png, /posts/vulnerabilite-izly/featured-image.png 1.5x, /posts/vulnerabilite-izly/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/posts/vulnerabilite-izly/featured-image.png"
+        title="J&#39;ai rapporté une vulnérabilité critique de l&#39;application Izly qui permet de faire payer son repas par n&#39;importe qui juste avec son numéro" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contenu</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#vulnérabilité-dans-le-qr-code-de-lapplication-téléphone-izly">Vulnérabilité dans le QR Code de l&rsquo;application téléphone Izly</a>
+      <ul>
+        <li><a href="#avant-propos-">Avant-propos :</a></li>
+        <li><a href="#exploitation-de-la-vulnérabilité-">Exploitation de la vulnérabilité :</a></li>
+        <li><a href="#impact-de-la-vulnérabilité">Impact de la vulnérabilité</a></li>
+        <li><a href="#preuve-">Preuve :</a></li>
+        <li><a href="#conclusion-">Conclusion :</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Rapport vulnérabilité</p>
+<h2 id="vulnérabilité-dans-le-qr-code-de-lapplication-téléphone-izly">Vulnérabilité dans le QR Code de l&rsquo;application téléphone Izly</h2>
+<p>Par Clément Gindrier</p>
+<h3 id="avant-propos-">Avant-propos :</h3>
+<p>Izly est une application pour payer les repas dans les restaurants universitaires     en France. Elle est téléchargée et utilisée par des millions de personnes.</p>
+<p>J&rsquo;ai reporté la vulnérabilité aux développeurs d&rsquo;Izly le 26 octobre 2022 avec le mail : <a href="mailto:support.izly@s-money.fr" rel="">support.izly@s-money.fr</a> qui apparaît sur le Play Store (aucun autre cZZontact n&rsquo;est disponible sur le site). Ils n&rsquo;ont jamais répondu ni résolu la vulnérabilité à la date où j&rsquo;écris ce rapport.</p>
+<h3 id="exploitation-de-la-vulnérabilité-">Exploitation de la vulnérabilité :</h3>
+<p>Un attaquant peut faire payer tous ses repas du restaurant universitaire par une autre personne en ne connaissant uniquement le numéro de téléphone de la victime.</p>
+<p>Nécessaire pour l&rsquo;attaquant :</p>
+<ul>
+<li>
+<p>Numéro de téléphone de la victime</p>
+</li>
+<li>
+<p>Il faut que la victime ait un compte Izly avec assez d&rsquo;argent pour payer le repas.</p>
+</li>
+</ul>
+<p>L&rsquo;attaque repose sur le fait que le QR Code généré par l&rsquo;application Izly pour payer utilise comme protection un HMAC qui n&rsquo;est jamais vérifié par le serveur. Le QR Code est généré hors ligne.</p>
+<p>Ainsi, le QR Code n&rsquo;est pas protégé, et le texte peut être modifié.</p>
+<div id="id-1"><p><figure><a class="lightgallery" href="/posts/vulnerabilite-izly/QrCode.png" title="Capture du QR Code" data-thumbnail="/posts/vulnerabilite-izly/QrCode.png" data-sub-html="<h2>QR Code</h2><p>Capture du QR Code</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/vulnerabilite-izly/QrCode.png"
+            data-srcset="/posts/vulnerabilite-izly/QrCode.png, /posts/vulnerabilite-izly/QrCode.png 1.5x, /posts/vulnerabilite-izly/QrCode.png 2x"
+            data-sizes="auto"
+            alt="/posts/vulnerabilite-izly/QrCode.png" width="273" height="588" />
+    </a><figcaption class="image-caption">QR Code</figcaption>
+    </figure></p>
+</div>
+<p>Texte du QR Code :</p>
+<pre tabindex="0"><code class="language-cfscript" data-lang="cfscript">AIZ;                                 -&gt; Type du QR Code
+33601234567;                         -&gt; Numéro de téléphone modifiable
+2022-11-26 20:11:51;                 -&gt; Date et heure de création du code
+3;                                   -&gt; Numéro du type du code
+141739b44f3c79e8cdee7896b87b6d46f0a6e042 -&gt; HMAC
+</code></pre><p>Il suffit donc :</p>
+<ul>
+<li>
+<p>Mettre le numéro de téléphone de la victime avec le bon format (33 à la place du 0).</p>
+</li>
+<li>
+<p>Mettre l&rsquo;heure à laquelle on va payer (UTC+0), car le QR Code périme en quelques minutes.</p>
+</li>
+<li>
+<p>Mettre un HMAC aléatoire, il ne sera pas vérifié. On peut même ne pas le mettre.</p>
+</li>
+</ul>
+<p>Puis générer le QR Code, le passer devant le scanner comme un QR Code Izly normal, et la personne ayant ce numéro paiera.</p>
+<p>L&rsquo;attaque peut être automatisée avec une application qui aurait la même interface que celle d&rsquo;Izly pour plus de discrétion.</p>
+<h3 id="impact-de-la-vulnérabilité">Impact de la vulnérabilité</h3>
+<p>La victime :</p>
+<ul>
+<li>
+<p>Ne peut pas se protéger contre les attaques à part en enlevant son argent de l&rsquo;application et en arrêtant d&rsquo;utiliser l&rsquo;application</p>
+</li>
+<li>
+<p>Elle peut uniquement voir l&rsquo;historique des paiements pour se rendre compte qu&rsquo;elle a perdu de l&rsquo;argent</p>
+</li>
+</ul>
+<p>L&rsquo;attaquant :</p>
+<ul>
+<li>
+<p>Il ne peut pas être traqué puisqu&rsquo;aucune information sur lui n&rsquo;est envoyée</p>
+</li>
+<li>
+<p>Il ne peut pas se faire attraper sur le fait, puisqu&rsquo;en caisse, seul le solde de la victime apparaît en plus du ticket de caisse. Personne ne peut deviner qu&rsquo;il ne paie pas pour lui</p>
+</li>
+<li>
+<p>L&rsquo;attaque fonctionne sans aucune action de la part de la victime</p>
+</li>
+<li>
+<p>Il n&rsquo;a besoin que d&rsquo;un numéro de téléphone contenant de l&rsquo;argent sur le compte Izly. Il peut très bien essayer plusieurs numéros pour voir le solde restant à la caisse</p>
+</li>
+<li>
+<p>N&rsquo;importe qui peut utiliser la vulnérabilité en quelques secondes, sans aucune connaissance en informatique</p>
+</li>
+</ul>
+<p>La vulnérabilité semble donc critique.</p>
+<h3 id="preuve-">Preuve :</h3>
+<h4 id="code-de-lapplication-">Code de l&rsquo;application :</h4>
+<p>Le code décompilé de l&rsquo;application montre que le HMAC est généré avec une clé qui est faite à partir du nombre de créations de QR Code par l&rsquo;utilisateur. Or, nous pouvons générer des QR Codes hors ligne, et donc en local, sans aucune communication avec le serveur. Le serveur ne peut donc pas être au courant de la clé, et donc du hash. Ainsi, les informations ne sont donc pas protégées car non vérifiables par le serveur.</p>
+<p><figure><a class="lightgallery" href="/posts/vulnerabilite-izly/GenQRCodeTexte.jpg" title="Fonction de génération du texte de QR Code" data-thumbnail="/posts/vulnerabilite-izly/GenQRCodeTexte.jpg" data-sub-html="<h2>Fonction de génération du texte de QR Code</h2><p>Fonction de génération du texte de QR Code</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/vulnerabilite-izly/GenQRCodeTexte.jpg"
+            data-srcset="/posts/vulnerabilite-izly/GenQRCodeTexte.jpg, /posts/vulnerabilite-izly/GenQRCodeTexte.jpg 1.5x, /posts/vulnerabilite-izly/GenQRCodeTexte.jpg 2x"
+            data-sizes="auto"
+            alt="/posts/vulnerabilite-izly/GenQRCodeTexte.jpg" width="1184" height="318" />
+    </a><figcaption class="image-caption">Fonction de génération du texte de QR Code</figcaption>
+    </figure></p>
+<p>On voit ici que la clé du HMAC <code>key</code> ligne 11 est générée dans la fonction <code>Genkey</code> ligne 2.</p>
+<p><figure><a class="lightgallery" href="/posts/vulnerabilite-izly/GetKey.jpg" title="Fonction de génération de la clé" data-thumbnail="/posts/vulnerabilite-izly/GetKey.jpg" data-sub-html="<h2>Fonction de génération du texte de la clé</h2><p>Fonction de génération de la clé</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/vulnerabilite-izly/GetKey.jpg"
+            data-srcset="/posts/vulnerabilite-izly/GetKey.jpg, /posts/vulnerabilite-izly/GetKey.jpg 1.5x, /posts/vulnerabilite-izly/GetKey.jpg 2x"
+            data-sizes="auto"
+            alt="/posts/vulnerabilite-izly/GetKey.jpg" width="1301" height="633" />
+    </a><figcaption class="image-caption">Fonction de génération du texte de la clé</figcaption>
+    </figure></p>
+<p>On voit dans la fonction <code>GenKey</code> que la <code>sharedPreferences</code> &ldquo;sharedPrefHotpCounter&rdquo; est récupérée, et va ensuite être un peu transformer pour en faire la clé.</p>
+<p><figure><a class="lightgallery" href="/posts/vulnerabilite-izly/sharedPrefInit.png" title="Initialisation à 0" data-thumbnail="/posts/vulnerabilite-izly/sharedPrefInit.png" data-sub-html="<h2>Initialisation à 0</h2><p>Initialisation à 0</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/vulnerabilite-izly/sharedPrefInit.png"
+            data-srcset="/posts/vulnerabilite-izly/sharedPrefInit.png, /posts/vulnerabilite-izly/sharedPrefInit.png 1.5x, /posts/vulnerabilite-izly/sharedPrefInit.png 2x"
+            data-sizes="auto"
+            alt="/posts/vulnerabilite-izly/sharedPrefInit.png" width="1193" height="24" />
+    </a><figcaption class="image-caption">Initialisation à 0</figcaption>
+    </figure></p>
+<p>La <code>sharedPreferences</code> &ldquo;sheredPrefHotpCounter&rdquo; est initialisée à 0 ici, puis incrémentée de 1 à chaque création de QR Code (dans la fonction qui génère la clé du HMAC).</p>
+<p><figure><a class="lightgallery" href="/posts/vulnerabilite-izly/sharedPrefModif.png" title="Incrémentation" data-thumbnail="/posts/vulnerabilite-izly/sharedPrefModif.png" data-sub-html="<h2>Incrémentation</h2><p>Incrémentation</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/vulnerabilite-izly/sharedPrefModif.png"
+            data-srcset="/posts/vulnerabilite-izly/sharedPrefModif.png, /posts/vulnerabilite-izly/sharedPrefModif.png 1.5x, /posts/vulnerabilite-izly/sharedPrefModif.png 2x"
+            data-sizes="auto"
+            alt="/posts/vulnerabilite-izly/sharedPrefModif.png" width="1227" height="18" />
+    </a><figcaption class="image-caption">Incrémentation</figcaption>
+    </figure></p>
+<p>C&rsquo;est les seuls endroit où cette <code>sharedPreferences</code> est modifiée.</p>
+<h4 id="tests-">Tests :</h4>
+<p>Il est possible de modifier le hash ainsi que l&rsquo;heure du texte du QR Code, régénérer le QR Code et voir qu&rsquo;il est toujours possible de payer. Il est donc très certainement possible de générer entièrement le QR Code avec n&rsquo;importe quel numéro sans avoir besoin de l&rsquo;application Izly (Je n&rsquo;ai essayé qu&rsquo;avec mon numéro de téléphone, mais tout le monde peut donc le faire avec mon numéro).</p>
+<h3 id="conclusion-">Conclusion :</h3>
+<p>La vulnérabilité est présente depuis au moins 4 ans, puisqu&rsquo;elle avait été découverte par 2 étudiants avant moi.</p>
+<p>J&rsquo;aimerais faire corriger la vulnérabilité, et, à défaut, prévenir les étudiants du potentiel danger de perte d&rsquo;argent en utilisant cette application. Car il me semble assez mauvais de laisser une vulnérabilité en espérant qu&rsquo;aucune personne malveillante ne tombe dessus.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Mis à jour le 30-11-2022</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/vulnerabilite-izly/index.md" target="_blank">Lire Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Partager sur Twitter" data-sharer="twitter" data-url="https://clementgindrier.github.io/posts/vulnerabilite-izly/" data-title="Vulnérabilité Izly" data-hashtags="vulnérabilité"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Partager sur Facebook" data-sharer="facebook" data-url="https://clementgindrier.github.io/posts/vulnerabilite-izly/" data-hashtag="vulnérabilité"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Partager sur Linkedin" data-sharer="linkedin" data-url="https://clementgindrier.github.io/posts/vulnerabilite-izly/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Partager sur Hacker News" data-sharer="hackernews" data-url="https://clementgindrier.github.io/posts/vulnerabilite-izly/" data-title="Vulnérabilité Izly"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Partager sur Line" data-sharer="line" data-url="https://clementgindrier.github.io/posts/vulnerabilite-izly/" data-title="Vulnérabilité Izly"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Partager sur 微博" data-sharer="weibo" data-url="https://clementgindrier.github.io/posts/vulnerabilite-izly/" data-title="Vulnérabilité Izly"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/vuln%C3%A9rabilit%C3%A9/">vulnérabilité</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Retour</a></span>&nbsp;|&nbsp;<span><a href="/">Accueil</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/posts/ticket-cantine/" class="next" rel="next" title="Vulnérabilité ticket cantine">Vulnérabilité ticket cantine<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Propulsé par <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.108.0">Hugo</a> | Thème - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Clément Gindrier</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Retour en Haut">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Afficher les Commentaires">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><link rel="stylesheet" href="/css/baaba8.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.fr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copier dans le presse-papiers","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"fr","maxResultLength":10,"noResultsFound":"Aucun résultat trouvé","snippetLength":30,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
