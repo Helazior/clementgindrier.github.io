@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>privacy - Tag - Clément Gindrier - Blog</title>
+        <link>https://helazior.github.io/tags/privacy/</link>
+        <description>privacy - Tag - Clément Gindrier - Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>clementgindrier@proton.me (Clément Gindrier)</managingEditor>
+            <webMaster>clementgindrier@proton.me (Clément Gindrier)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 03 Dec 2022 20:34:53 &#43;0100</lastBuildDate><atom:link href="https://helazior.github.io/tags/privacy/" rel="self" type="application/rss+xml" /><item>
+    <title>Overview Of Privacytests.org</title>
+    <link>https://helazior.github.io/posts/privacytests/</link>
+    <pubDate>Sat, 03 Dec 2022 20:34:53 &#43;0100</pubDate>
+    <author>Clément Gindrier</author>
+    <guid>https://helazior.github.io/posts/privacytests/</guid>
+    <description><![CDATA[Is privacytests.org the solution to find a browser that respects your privacy?]]></description>
+</item>
+</channel>
+</rss>

@@ -1,13 +1,13 @@
-# Analyse de privacytests.org
+# Overview Of Privacytests.org
 
 
 <!--more-->
 
-Il est difficile de savoir quel navigateur respecte vraiment votre vie privée, le sujet est complexe et les navigateurs ne vont pas vous aider.
+It is difficult to know which browser really respects your privacy, the subject is complex and browsers are not going to help you.
 
-Un seul site à ce jour permet de comparer facilement la protection de vie privée des navigateurs, c'est (privacytests.org)[https://privacytests.org] créé par Arthur Edelstein.
+Only one website so far allows you to easily compare the privacy of browsers, it is [privacytests.org](https://privacytests.org) created by Arthur Edelstein.
 
-Cet article analyse ce site web pour mieux comprendre ce qu'il teste et discute des possibles biais.
+This article analyzes this website to better understand what it tests and discusses possible biases.
 
-[Lire l'article](overviewOfPrivacyTests.pdf)
+[Read article](overviewOfPrivacyTests.pdf).
 

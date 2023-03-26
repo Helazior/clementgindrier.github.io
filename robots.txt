@@ -61,4 +61,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: https://clementgindrier.github.io/en/sitemap.xml
+Sitemap: https://helazior.github.io/sitemap.xml
