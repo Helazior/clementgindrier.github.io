@@ -4,85 +4,13 @@
         <link>https://clementgindrier.github.io/posts/</link>
         <description>Tous Posts | Clément Gindrier - Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>fr</language><managingEditor>clementgindrier@proton.me (Clément Gindrier)</managingEditor>
-            <webMaster>clementgindrier@proton.me (Clément Gindrier)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 11 Dec 2022 19:12:03 &#43;0100</lastBuildDate><atom:link href="https://clementgindrier.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Course De Poke</title>
-    <link>https://clementgindrier.github.io/posts/course-de-poke/</link>
-    <pubDate>Sun, 11 Dec 2022 19:12:03 &#43;0100</pubDate>
-    <author>Clément Gindrier</author>
-    <guid>https://clementgindrier.github.io/posts/course-de-poke/</guid>
-    <description><![CDATA[Faire une course de diagramme à barres avec les pokes de Facebook]]></description>
-</item>
-<item>
-    <title>Annalyse ChatGPT</title>
-    <link>https://clementgindrier.github.io/posts/annalyse-chatgpt/</link>
-    <pubDate>Thu, 08 Dec 2022 15:02:38 &#43;0100</pubDate>
-    <author>Clément Gindrier</author>
-    <guid>https://clementgindrier.github.io/posts/annalyse-chatgpt/</guid>
-    <description><![CDATA[Est-ce que chatGPT est une vraie révolution qui va rendre inutile Google ?]]></description>
-</item>
-<item>
-    <title>Bug dans les distributeur café</title>
-    <link>https://clementgindrier.github.io/posts/bug-distributeur-cafe/</link>
-    <pubDate>Wed, 07 Dec 2022 19:43:21 &#43;0100</pubDate>
-    <author>Clément Gindrier</author>
-    <guid>https://clementgindrier.github.io/posts/bug-distributeur-cafe/</guid>
-    <description><![CDATA[<p>Certaines marchines à café permettent d&rsquo;obtenir n&rsquo;importe quel choix pour le prix du moins cher. Voilà comment ça marche :</p>]]></description>
-</item>
-<item>
-    <title>Préparation d&#39;un grand voyage</title>
-    <link>https://clementgindrier.github.io/posts/travel-preparation/</link>
-    <pubDate>Tue, 06 Dec 2022 20:18:25 &#43;0100</pubDate>
-    <author>Clément Gindrier</author>
-    <guid>https://clementgindrier.github.io/posts/travel-preparation/</guid>
-    <description><![CDATA[Je suis un aventurier dans l'âme qui s'est perdu en chemin. Je me dois d'enfin réaliser ces voyages dans le monde qui me fond tant rêver]]></description>
-</item>
-<item>
-    <title>Road to webster</title>
-    <link>https://clementgindrier.github.io/posts/road-to-webster/</link>
-    <pubDate>Tue, 06 Dec 2022 20:15:39 &#43;0100</pubDate>
-    <author>Clément Gindrier</author>
-    <guid>https://clementgindrier.github.io/posts/road-to-webster/</guid>
-    <description><![CDATA[J'ai pris des années à comprendre cette figure. Mais aujourd'hui j'ai réussi à l'apprendre plus vite que quiconque]]></description>
-</item>
-<item>
-    <title>Road to handstand</title>
-    <link>https://clementgindrier.github.io/posts/road-to-handstand/</link>
-    <pubDate>Tue, 06 Dec 2022 20:15:27 &#43;0100</pubDate>
-    <author>Clément Gindrier</author>
-    <guid>https://clementgindrier.github.io/posts/road-to-handstand/</guid>
-    <description><![CDATA[Ça fait des années que j'essaie d'apprendre l'équilibre. Cette fois, je m'y mets serieusement]]></description>
-</item>
-<item>
-    <title>Ce que Google connait de nous</title>
-    <link>https://clementgindrier.github.io/posts/google-privacy/</link>
-    <pubDate>Sat, 03 Dec 2022 20:35:10 &#43;0100</pubDate>
-    <author>Clément Gindrier</author>
-    <guid>https://clementgindrier.github.io/posts/google-privacy/</guid>
-    <description><![CDATA[J&rsquo;ai demandé à Google de me fournir ce qu&rsquo;ils stockaient à mon sujet, et voilà ce que j&rsquo;ai découvert :]]></description>
-</item>
-<item>
-    <title>Ce que Facebook connait de nous</title>
-    <link>https://clementgindrier.github.io/posts/facebook-privacy/</link>
-    <pubDate>Sat, 03 Dec 2022 20:35:06 &#43;0100</pubDate>
-    <author>Clément Gindrier</author>
-    <guid>https://clementgindrier.github.io/posts/facebook-privacy/</guid>
-    <description><![CDATA[J&rsquo;ai demandé à Facebook de me fournir ce qu&rsquo;ils stockaient à mon sujet, et voilà ce que j&rsquo;ai découvert :]]></description>
-</item>
-<item>
-    <title>Privacytest est-il pertinant ?</title>
-    <link>https://clementgindrier.github.io/posts/privacy-test/</link>
+            <webMaster>clementgindrier@proton.me (Clément Gindrier)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 03 Dec 2022 20:34:53 &#43;0100</lastBuildDate><atom:link href="https://clementgindrier.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Analyse de privacytests.org</title>
+    <link>https://clementgindrier.github.io/posts/privacytests/</link>
     <pubDate>Sat, 03 Dec 2022 20:34:53 &#43;0100</pubDate>
     <author>Clément Gindrier</author>
-    <guid>https://clementgindrier.github.io/posts/privacy-test/</guid>
-    <description><![CDATA[Quelles sont les données que Google stocke sur nous ?]]></description>
-</item>
-<item>
-    <title>Vulnérabilité ticket cantine</title>
-    <link>https://clementgindrier.github.io/posts/ticket-cantine/</link>
-    <pubDate>Wed, 30 Nov 2022 23:23:21 &#43;0100</pubDate>
-    <author>Clément Gindrier</author>
-    <guid>https://clementgindrier.github.io/posts/ticket-cantine/</guid>
-    <description><![CDATA[En 2016 dans mon Lycée, les tickets à l'unité étaient reproductiblent]]></description>
+    <guid>https://clementgindrier.github.io/posts/privacytests/</guid>
+    <description><![CDATA[Privacytests.org est-il la solution pour trouver un navigateur qui respecte votre vie privée ?]]></description>
 </item>
 </channel>
 </rss>
