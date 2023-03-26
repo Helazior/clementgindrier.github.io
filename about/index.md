@@ -17,9 +17,9 @@ This site is made with  [Hugo](https://gohugo.io/) and the [LoveIt](https://hugo
 
 ### Ressources
 
-[Mon CV](ResumeClementGindrierSite.pdf)  
-Mon mail : clementgindrier[at]outlook.com  
-[Ma clé PGP](ClementGindrier.asc)
+[My resume](ResumeClementGindrierSite.pdf)  
+My email address: clementgindrier[at]outlook.com  
+[PGP key](ClementGindrier.asc)
 
 <!--### Collège-->
 
