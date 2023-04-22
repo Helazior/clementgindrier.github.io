@@ -15,9 +15,9 @@ Ce site est fait avec [Hugo](https://gohugo.io/) ainsi que le template [LoveIt](
 
 ### Ressources
 
-[Mon CV](ResumeClementGindrierSite.pdf)  
-Mon mail : clementgindrier[at]outlook.com  
-[Ma clé PGP](ClementGindrier.asc)
+<!--[Mon CV](ResumeClementGindrierSite.pdf)  -->
+Mon mail : helazior[at]protonmail.com  
+[Ma clé PGP](helazior.asc)
 
 <!--### Collège-->
 <!--De nature excrement curieux, je me suis d'abord formé en autodidact à partir de mes 13 ans. J'ai commencé par hazard avec le moteur de jeu [GDevolop](https://gdevelop.io), qui m'a fait naître la passion.  -->
