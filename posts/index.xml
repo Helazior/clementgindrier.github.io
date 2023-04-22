@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - Clément Gindrier - Blog</title>
+        <title>All Posts - Helazior - Blog</title>
         <link>https://helazior.github.io/posts/</link>
-        <description>All Posts | Clément Gindrier - Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>clementgindrier@proton.me (Clément Gindrier)</managingEditor>
-            <webMaster>clementgindrier@proton.me (Clément Gindrier)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 03 Feb 2023 20:34:53 &#43;0100</lastBuildDate><atom:link href="https://helazior.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <description>All Posts | Helazior - Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>helazior@protonmail.me (Clément Gindrier)</managingEditor>
+            <webMaster>helazior@protonmail.me (Clément Gindrier)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 03 Feb 2023 20:34:53 &#43;0100</lastBuildDate><atom:link href="https://helazior.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Overview Of Privacytests.org</title>
     <link>https://helazior.github.io/posts/privacytests/</link>
     <pubDate>Fri, 03 Feb 2023 20:34:53 &#43;0100</pubDate>
