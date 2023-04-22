@@ -18,6 +18,7 @@ This site is made with  [Hugo](https://gohugo.io/) and the [LoveIt](https://hugo
 ### Ressources
 
 <!--[My resume](ResumeClementGindrierSite.pdf)  -->
+
 My email address: helazior[at]protonmail.com  
 [PGP key](helazior.asc)
 
