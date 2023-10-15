@@ -1,0 +1,30 @@
+package org.spongycastle.jce.provider;
+
+import java.util.Collection;
+import org.spongycastle.util.CollectionStore;
+import org.spongycastle.util.Selector;
+import org.spongycastle.x509.X509CollectionStoreParameters;
+import org.spongycastle.x509.X509StoreParameters;
+import org.spongycastle.x509.X509StoreSpi;
+
+/* loaded from: /home/clement/Documents/site/ma_vie/content/posts/vulnerabilite-izly/resources/classes.dex */
+public class X509StoreCertPairCollection extends X509StoreSpi {
+    private CollectionStore _store;
+
+    @Override // org.spongycastle.x509.X509StoreSpi
+    public Collection engineGetMatches(Selector selector) {
+        return this._store.getMatches(selector);
+    }
+
+    @Override // org.spongycastle.x509.X509StoreSpi
+    public void engineInit(X509StoreParameters x509StoreParameters) {
+        if (x509StoreParameters instanceof X509CollectionStoreParameters) {
+            this._store = new CollectionStore(((X509CollectionStoreParameters) x509StoreParameters).getCollection());
+            return;
+        }
+        StringBuilder m253r = outline.m253r("Initialization parameters must be an instance of ");
+        m253r.append(X509CollectionStoreParameters.class.getName());
+        m253r.append(".");
+        throw new IllegalArgumentException(m253r.toString());
+    }
+}

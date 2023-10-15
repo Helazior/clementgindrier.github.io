@@ -1,0 +1,292 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "vulnerabilite-izly/resources"
+  ],
+  "treeExpansions": [
+    [
+      "fr.smoney.android.izly",
+      "Source code",
+      "resources"
+    ],
+    [
+      "p005ui",
+      "fr.smoney.android.izly",
+      "Source code",
+      "resources"
+    ],
+    [
+      "privateview",
+      "p005ui",
+      "fr.smoney.android.izly",
+      "Source code",
+      "resources"
+    ]
+  ],
+  "codeData": {
+    "comments": [
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "qd",
+          "shortId": "onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 201
+        },
+        "comment": "type of the QR Code"
+      }
+    ],
+    "renames": [
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "C8",
+          "shortId": "d:Ljava/lang/String;"
+        },
+        "newName": "userID"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "qd",
+          "shortId": "k:Ljava/lang/String;"
+        },
+        "newName": "uuid"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "qd",
+          "shortId": "l:Ljava/lang/String;"
+        },
+        "newName": "Nsse"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "qd",
+          "shortId": "m:Ljava/lang/String;"
+        },
+        "newName": "utcDatesUTC"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "C8",
+          "shortId": "e(Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 655360
+        },
+        "newName": "uuid"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "C8",
+          "shortId": "j()Ljava/lang/String;"
+        },
+        "newName": "userId"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "C8",
+          "shortId": "k()Z"
+        },
+        "newName": "is_user_id_null"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "C8",
+          "shortId": "l(Ljava/lang/String;)Z"
+        },
+        "newName": "is33first"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "C8",
+          "shortId": "l(Ljava/lang/String;)Z"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 0
+        },
+        "newName": "userId"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "C8",
+          "shortId": "l(Ljava/lang/String;)Z"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "uuid"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "C8",
+          "shortId": "m(Ljava/lang/String;)V"
+        },
+        "newName": "editSharedPrefNsse"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "C8",
+          "shortId": "o(Ljava/lang/String;)V"
+        },
+        "newName": "editUserId"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "Yd",
+          "shortId": "d(Ljava/lang/Object;Ljava/lang/String;)V"
+        },
+        "newName": "checkIfNULL"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "qd",
+          "shortId": "onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 8
+        },
+        "newName": "date_hour"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "qd",
+          "shortId": "onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 13
+        },
+        "newName": "sb_first_part"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "qd",
+          "shortId": "onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 131072
+        },
+        "newName": "uuid2"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "qd",
+          "shortId": "onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262145
+        },
+        "newName": "uuid"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "qd",
+          "shortId": "onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524292
+        },
+        "newName": "user_id"
+      }
+    ]
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "fr.smoney.android.izly.SmoneyABSActivity",
+      "subPath": "java",
+      "caret": 774,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "qd",
+      "subPath": "java",
+      "caret": 5439,
+      "view": {
+        "x": 0,
+        "y": 1003
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "Yd",
+      "subPath": "java",
+      "caret": 1074,
+      "view": {
+        "x": 0,
+        "y": 182
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "C8",
+      "subPath": "java",
+      "caret": 2845,
+      "view": {
+        "x": 0,
+        "y": 1083
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "fr.smoney.android.izly.ui.publicview.login.LoginActivity",
+      "subPath": "java",
+      "caret": 14389,
+      "view": {
+        "x": 0,
+        "y": 5083
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "fr.smoney.android.izly.data.model.UserData",
+      "subPath": "java",
+      "caret": 379,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "activeTab": 1,
+  "cacheDir": "vulnerabilite-izly/resources.cache",
+  "enableLiveReload": false,
+  "searchHistory": [
+    "sharedPrefHotpUserId",
+    "useriD",
+    "sharedPrefNsse",
+    "m2499j",
+    "aiz"
+  ]
+}

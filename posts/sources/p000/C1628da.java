@@ -1,0 +1,120 @@
+package p000;
+
+import android.util.SparseIntArray;
+import android.widget.ScrollView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+/* renamed from: da */
+/* loaded from: /home/clement/Documents/site/ma_vie/content/posts/vulnerabilite-izly/resources/classes.dex */
+public class C1628da extends AbstractC0994ca {
+
+    /* renamed from: h */
+    public static final SparseIntArray f4024h;
+
+    /* renamed from: d */
+    public final ScrollView f4025d;
+
+    /* renamed from: f */
+    public final ConstraintLayout f4026f;
+
+    /* renamed from: g */
+    public long f4027g;
+
+    static {
+        SparseIntArray sparseIntArray = new SparseIntArray();
+        f4024h = sparseIntArray;
+        sparseIntArray.put(2131296353, 2);
+        sparseIntArray.put(2131296953, 3);
+        sparseIntArray.put(2131296437, 4);
+        sparseIntArray.put(2131296438, 5);
+        sparseIntArray.put(2131296403, 6);
+    }
+
+    /* JADX WARN: Illegal instructions before constructor call */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public C1628da(androidx.databinding.DataBindingComponent r13, android.view.View r14) {
+        /*
+            r12 = this;
+            android.util.SparseIntArray r0 = p000.C1628da.f4024h
+            r1 = 7
+            r2 = 0
+            java.lang.Object[] r0 = androidx.databinding.ViewDataBinding.mapBindings(r13, r14, r1, r2, r0)
+            r1 = 2
+            r1 = r0[r1]
+            r7 = r1
+            android.view.View r7 = (android.view.View) r7
+            r1 = 6
+            r1 = r0[r1]
+            r8 = r1
+            android.widget.Button r8 = (android.widget.Button) r8
+            r1 = 4
+            r1 = r0[r1]
+            r9 = r1
+            fr.smoney.android.izly.ui.widget.CustomIconTextView r9 = (fr.smoney.android.izly.p005ui.widget.CustomIconTextView) r9
+            r1 = 5
+            r1 = r0[r1]
+            r10 = r1
+            fr.smoney.android.izly.ui.widget.CustomIconTextView r10 = (fr.smoney.android.izly.p005ui.widget.CustomIconTextView) r10
+            r1 = 3
+            r1 = r0[r1]
+            r11 = r1
+            android.widget.TextView r11 = (android.widget.TextView) r11
+            r6 = 0
+            r3 = r12
+            r4 = r13
+            r5 = r14
+            r3.<init>(r4, r5, r6, r7, r8, r9, r10, r11)
+            r3 = -1
+            r12.f4027g = r3
+            r13 = 0
+            r13 = r0[r13]
+            android.widget.ScrollView r13 = (android.widget.ScrollView) r13
+            r12.f4025d = r13
+            r13.setTag(r2)
+            r13 = 1
+            r13 = r0[r13]
+            androidx.constraintlayout.widget.ConstraintLayout r13 = (androidx.constraintlayout.widget.ConstraintLayout) r13
+            r12.f4026f = r13
+            r13.setTag(r2)
+            r12.setRootTag(r14)
+            r12.invalidateAll()
+            return
+        */
+        throw new UnsupportedOperationException("Method not decompiled: p000.C1628da.<init>(androidx.databinding.DataBindingComponent, android.view.View):void");
+    }
+
+    @Override // androidx.databinding.ViewDataBinding
+    public void executeBindings() {
+        synchronized (this) {
+            this.f4027g = 0L;
+        }
+    }
+
+    @Override // androidx.databinding.ViewDataBinding
+    public boolean hasPendingBindings() {
+        synchronized (this) {
+            return this.f4027g != 0;
+        }
+    }
+
+    @Override // androidx.databinding.ViewDataBinding
+    public void invalidateAll() {
+        synchronized (this) {
+            this.f4027g = 1L;
+        }
+        requestRebind();
+    }
+
+    @Override // androidx.databinding.ViewDataBinding
+    public boolean onFieldChange(int i, Object obj, int i2) {
+        return false;
+    }
+
+    @Override // androidx.databinding.ViewDataBinding
+    public boolean setVariable(int i, Object obj) {
+        return true;
+    }
+}
